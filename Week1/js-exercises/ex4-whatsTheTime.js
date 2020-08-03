@@ -13,6 +13,12 @@
 
 function displayCurrentTime() {
   // your code goes in here
+  var time = new Date();
+  document.body.innerText = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+
 }
 
-setInterval(displayCurrentTime, 1000);
+window.onload = () => setInterval(displayCurrentTime, 1000);
+
+
+
