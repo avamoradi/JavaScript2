@@ -18,6 +18,45 @@
 
 function createBookList(books) {
   // your code goes in here, return the ul element
+   let ul = document.createElement('ul');
+   ul.style.display = "flex";
+   ul.style.justifyContent = "space-around";
+   ul.style.listStyle = "none";
+   const bookList = document.querySelector('#bookList');
+   bookList.appendChild(ul);
+
+  books.forEach(element => {
+     let bookTitle = element.title;
+     let bookAuthor = element.author;
+     let p = document.createElement('p');
+     p.innerText = bookTitle + " - " + bookAuthor ;
+       
+    const li = document.createElement('li');
+    ul.appendChild(li);
+    li.appendChild(p) ;
+    li.style.width = "30%";
+
+    let a  = document.createElement('a');
+    let image = document.createElement('img');
+    image.className = "bKImage";
+    image.style.width = "40%";
+    a.appendChild(image);
+    li.appendChild(a);
+    
+    if (element.alreadyRead == false) {
+      li.style.backgroundColor = 'red';
+    } else {
+      li.style.backgroundColor = 'green';
+    }
+    
+  });
+
+  let coverImage = document.querySelectorAll('.bKImage');
+  coverImage[0].src = "https://media.s-bol.com/7ov383lj3Rr/550x824.jpg";
+  
+  coverImage[1].src = "https://d1w7fb2mkkr3kw.cloudfront.net/assets/images/book/mid/9780/3074/9780307476708.jpg";
+
+  coverImage[2].src = "https://www.studystore.nl/images/9780132119177/3/1";
 }
 
 const books = [{
@@ -39,4 +78,4 @@ const books = [{
 
 let ulElement = createBookList(books);
 
-document.querySelector("#bookList").appendChild(ulElement);
+//document.querySelector("#bookList").appendChild(ulElement);
