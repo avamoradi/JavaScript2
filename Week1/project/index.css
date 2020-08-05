@@ -1,0 +1,73 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+.conatainer{
+  padding: 1rem;
+  margin: auto;
+  margin-top: 10rem;
+  width: 80%;
+  height:500px;
+  background-color:#FFA500 ;
+}
+
+.holder {
+  margin: auto;
+  margin-top: 5rem;
+  width: 70%;
+  height:270px;
+  background-color:#fff ;
+  padding: 0.5rem;
+}
+
+.quoteHolder {
+  margin:1rem;
+  height: 150px;
+  font-size:2rem ;
+  line-height: 2.2rem;
+  color: #FFA500;
+
+}
+
+.buttonHolder {
+  margin: 1rem;
+  padding: 0.2rem;
+}
+
+.links img {
+  height: 50px;
+  }
+
+.newQuote {
+  width: 15%;
+  height: 50px;
+  background-color:#FFA500 ;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.2rem;
+}
+
+.emptyQuote {
+  width: 30%;
+  height: 50px;
+  background-color: white;
+  border: none;
+  margin-top: 0.3rem;
+  margin-left: 35%;
+}
+
+button:hover{
+  box-shadow:  2px 5px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(109, 107, 107, 0.19);
+}
