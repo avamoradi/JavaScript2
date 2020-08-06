@@ -17,12 +17,13 @@
  function catWalk() {
    pos +=10;
    image.style.left = pos + "px";
-   if (pos >= 1000) {
+   if (pos >= innerWidth) {
      pos = 0;
      image.style.left = "0px";
-    }
-  
-   if (pos == 500) {
+    }0
+   
+   console.log(innerWidth);
+   if (pos == middleWidth) {
     image.src = "tenor.gif";
     clearInterval(id);
     setTimeout(() => {
@@ -35,8 +36,12 @@
 let image = document.querySelector('img');
 let pos = 0;
 image.style.left = "0px";
+let innerWidth = window.innerWidth - image.width;
+let middleWidth = (Math.ceil((innerWidth / 2) / 10) * 10) ; // because everytime pos is +=10! 
 let imageRef = image.src;
 id = setInterval(catWalk, 50);
+
+
 
 
 
