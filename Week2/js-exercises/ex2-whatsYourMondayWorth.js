@@ -12,9 +12,15 @@
  */
 
 
-function dayWorth(tasks, hourlyRate) {
+ function dayWorth(tasks, hourlyRate) {
   // put your code in here, the function does returns a euro formatted string
-}
+  let mapArray = `€ ${(tasks
+    .map(monday => monday.duration)  
+    .reduce((total, min) => total + min / 60 * hourlyRate , 0)).toFixed(2)}`;
+  return mapArray;
+  }
+
+
 
 const mondayTasks = [{
     name: 'Daily standup',
@@ -33,6 +39,10 @@ const mondayTasks = [{
     duration: 60,
   },
 ];
+
+
+
+
 
 console.log(dayWorth(mondayTasks, 25))
 console.log(dayWorth(mondayTasks, 13.37))
