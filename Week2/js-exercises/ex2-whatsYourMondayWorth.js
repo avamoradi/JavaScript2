@@ -40,9 +40,5 @@ const mondayTasks = [{
   },
 ];
 
-
-
-
-
 console.log(dayWorth(mondayTasks, 25))
 console.log(dayWorth(mondayTasks, 13.37))
