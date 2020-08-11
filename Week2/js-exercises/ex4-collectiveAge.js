@@ -8,8 +8,16 @@
  Avoid using for loop or forEach.
  */
 
+ 
+function collectiveMembers(hyfMembers, callback) {
+  var mappedArray = hyfMembers.map(hyfObject => hyfObject.age);
+  return callback(mappedArray);
+}
+
 function collectiveAge(people) {
   // return the sum of age for all the people
+  var sumAge = people.reduce((total, age) => total + age , 0);
+  return sumAge;
 }
 
 const hackYourFutureMembers = [{
@@ -30,4 +38,4 @@ const hackYourFutureMembers = [{
   },
 ];
 
-console.log("The collective age of the HYF team is: " + collectiveMembers(hackYourFutureMembers));
+console.log(`The collective age of the HYF team is: ${collectiveMembers(hackYourFutureMembers, collectiveAge)}`);
