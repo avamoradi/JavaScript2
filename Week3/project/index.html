@@ -4,12 +4,45 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
   <title>Tip Calculator</title>
 </head>
 
 <body>
-  <div id="app"></div>
+  <div id="app">
+    <h1>Tip Calculator</h1>
+    <form id = "calculateForm">
+      <div class = "divForm">
+        <label for="billAmount">How much was your bill?</label>
+        <br>
+        <small>$</small> <input type="text" id= "billAmount">
+      </div>
+
+      <div class = "divForm">
+        <label for="sercicePercent">How was your service?</label>
+        <br>
+        <select id = "servicePercent" name= "servive">
+          <option value="" disabled selected hidden>Choose an option...</option>
+          <option value="30">30%-Outstanding</option>
+          <option value="20">20%-Good</option>
+          <option value="15">15%-Ok</option>
+          <option value="10">10%-Bad</option>
+          <option value="5">5%-Terrible</option>
+        </select> 
+      </div>
+     
+      <div class = "divForm">
+        <label for="peopleNumber">How many people are sharing the bill?</label>
+        <br>
+        <input type="text" id ="peopleNumber"> <small>People</small>
+      </div>
+      <div id = "divButton">
+        <button type="button">Calculate</button>
+      </div>
+    </form>
+  </div>
   <script src="index.js"></script>
+
 </body>
 
 </html>
