@@ -26,13 +26,39 @@ Don't you just love the thrill of the lottery? What if I told you we can make ou
 
 */
 
+function sayThree(x){
+  console.log(`${x} dividble by 3`)
+}
+
+function sayFive(x){
+  console.log(`${x} dividble by 5`)
+}
+
+
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
-  const numbers = [];
-  // make array
-  // start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
+   const numbers = [];
+  //   make array
+  //   start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
+   for (i = startIndex ; i <= stopIndex ; i++) {
+    numbers.push(i);
+   }
+   console.log(numbers);
+   for (y = 0; y < numbers.length ; y++){
+
+    if (numbers[y] % 3 === 0 ) {
+    threeCallback(numbers[y]);
+    } 
+
+    if (numbers[y] % 5 === 0 ) {
+    fiveCallback(numbers[y]);
+    }
+   }
 }
 
 threeFive(10, 15, sayThree, sayFive);
 
 // Should create an array [10,11,12,13,14,15]
 // and call sayFive, sayThree, sayThree, sayFive
+
+
+
