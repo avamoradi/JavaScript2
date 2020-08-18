@@ -36,7 +36,7 @@ function removeDuplicates(arr) {
  const newArray = removeDuplicates(letters);
 
  if (JSON.stringify(newArray)  === JSON.stringify(['a', 'b', 'c', 'd', 'e', 'f'])) 
-
+ console.log(letters);
  console.log("Hooray!")
  
 

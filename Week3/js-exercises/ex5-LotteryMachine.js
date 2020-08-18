@@ -27,11 +27,11 @@ Don't you just love the thrill of the lottery? What if I told you we can make ou
 */
 
 function sayThree(x){
-  console.log(`${x} dividble by 3`)
+  console.log(`${x} divisible by 3`)
 }
 
 function sayFive(x){
-  console.log(`${x} dividble by 5`)
+  console.log(`${x} divisible by 5`)
 }
 
 
